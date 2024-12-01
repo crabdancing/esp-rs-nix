@@ -21,6 +21,7 @@
       }: let
         esp-rs = pkgs.callPackage ./esp-rs/default.nix {};
       in {
+        packages.default = esp-rs;
         devShells.default = pkgs.mkShell {
           name = "esp-rs-nix";
 
